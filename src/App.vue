@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-   
     <NavigationMobile />
     <div class="home" :class="{'open':showNav}">
       <div class="top-bar">
@@ -10,7 +9,7 @@
         </div>
         <Navigation v-if="!mobileView" />
       </div>
-      <Home />
+      <router-view></router-view>
     </div>
   </div>
 </template>
@@ -18,8 +17,6 @@
 <script>
 import Navigation from "./components/Navigation.vue";
 import NavigationMobile from "./components/NavigationMobile.vue";
-import Home from "./components/Home.vue";
-import Router from 'vue-router';
 export default {
   data: () => {
     return {
@@ -34,8 +31,7 @@ export default {
   },
   components: {
     Navigation,
-    NavigationMobile,
-    Home
+    NavigationMobile
   },
   created() {
     this.handleView();

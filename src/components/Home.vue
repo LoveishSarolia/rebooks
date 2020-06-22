@@ -3,7 +3,7 @@
       <h2>Shop for Textbooks</h2>
       <ul class="featured-items">
         <li v-for="product in products" :key="product.id" class="featured-items__item">
-          <router-link :to="{ name: 'product', params: { id: product.id}}">
+          <router-link :to="productLink(product)">
             <img class="product-image" :src="imagePath(product)" alt="">
             <p class="product-title">{{ product.name }}</p>
             <p><em>${{ product.price }}</em></p>
@@ -24,6 +24,10 @@ export default {
     }
   },
   methods: {
+    productLink(product) {
+      let link = `/products/${product.isbn}`;
+      return link
+    },
     imagePath(product) {
       console.log('>product>!!!!!!!!!',product);
       let photo = require(`../assets/img/products/${product.image[0]}`);
