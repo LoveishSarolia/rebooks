@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    cart: [9780357042922],
+    cart: [],
     products: [
       {
         name: "Organic Chemistry Textbook",
