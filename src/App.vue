@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-   
     <NavigationMobile />
     <div class="home" :class="{'open':showNav}">
       <div class="top-bar">
@@ -10,7 +9,7 @@
         </div>
         <Navigation v-if="!mobileView" />
       </div>
-      <Home />
+      <router-view></router-view>
     </div>
   </div>
 </template>
@@ -18,8 +17,6 @@
 <script>
 import Navigation from "./components/Navigation.vue";
 import NavigationMobile from "./components/NavigationMobile.vue";
-import Home from "./components/Home.vue";
-import Router from 'vue-router';
 export default {
   data: () => {
     return {
@@ -34,8 +31,7 @@ export default {
   },
   components: {
     Navigation,
-    NavigationMobile,
-    Home
+    NavigationMobile
   },
   created() {
     this.handleView();
@@ -63,14 +59,14 @@ body {
   height: calc(100vh - 20px);
   padding: 10px;
   color: #333;
-  overflow: hidden;
+  overflow: auto;
 }
 .top-bar {
   display: flex;
   width: 100%;
 }
 #navigation-icon {
-  padding: 10px 10px 20px;
+  padding: 10px 10px 10px;
   margin-right: 10px;
   cursor: pointer;
   i {
@@ -83,9 +79,7 @@ body {
   width: calc(100% - 60px);
   height: calc(100vh - 60px);
   padding: 20px;
-  background-color: #fff;
-  border-radius: 30px;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: #aec6cf;
   transition: 1s transform cubic-bezier(0,.12,.14,1);
 }
 .open {
