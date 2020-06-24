@@ -1,7 +1,8 @@
 <template>
   <div id="navigation">
     <ul>
-      <li>Home</li>
+      <li><router-link class="navLink" to='/'>Home</router-link></li>
+      <li><router-link class="navLink" to='/cart'>Cart</router-link></li>
       <li>Account</li>
       <li>About Us</li>
     </ul>
@@ -12,9 +13,7 @@
   </div>
 </template>
 
-<script>
-export default {};
-</script>
+<script/>
 
 <style lang="scss" scoped>
 #navigation {
@@ -28,10 +27,11 @@ export default {};
     margin: 0 20px 0 0;
     li {
       font-size: 2rem;
+      font-weight: bold;
       padding: 2px 10px;
       cursor: pointer;
       &:hover {
-        color: #aec6cf;
+        color: #efefef;
       }
     }
   }
@@ -59,5 +59,17 @@ export default {};
       cursor: pointer;
     }
   }
+}
+.navLink {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 2px 10px;
+  cursor: pointer;  
+  &:link, &:visited {
+    color: #3c3e3e;
+  };
+  &:hover {
+    color: #ffffff;
+  };
 }
 </style>

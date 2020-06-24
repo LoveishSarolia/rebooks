@@ -5,10 +5,10 @@
       <i class="fas fa-search"></i>
     </div>
     <ul>
-      <li>Home</li>
+      <li><router-link class="navLink" to='/'>Home</router-link></li>
+      <li><router-link class="navLink" to='/cart'>Cart</router-link></li>
       <li>Account</li>
-      <li>About Us</li>
-    </ul>
+      <li>About Us</li>    </ul>
     <div class="social-media">
       <i class="fab fa-twitter"></i>
       <i class="fab fa-instagram"></i>
@@ -17,9 +17,7 @@
   </div>
 </template>
 
-<script>
-export default {};
-</script>
+<script/>
 
 <style lang="scss" scoped>
 #navigation-mobile {
@@ -50,18 +48,22 @@ export default {};
       width: 180px;
       padding: 10px 50px 10px 20px;
       margin: 0;
-      border-radius: 20px;
-      background-color: #efefef;
+      border-radius: 10px;
+      background-color: #3c3e3e;
       font-family: "Segoe UI", Tahoma;
       font-size: 1rem;
+      color: #ffffff;
     }
     i {
       position: absolute;
       right: 5px;
-      top: 10px;
+      top: 7px;
       font-size: 1.6rem;
-      color: #aaa;
+      color: #ffffff;
       cursor: pointer;
+    }
+    ::placeholder {
+      color: white;
     }
   }
   .social-media {
@@ -70,9 +72,21 @@ export default {};
     bottom: 20px;
     i {
       margin: 0 20px 0 0;
-      color: #fff;
+      color: #ffffff;
       font-size: 2rem;
     }
+  }
+}
+.navLink {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 2px 10px;
+  cursor: pointer;
+  &:link, &:visited {
+    color: #ffffff;
+  };
+  &:hover {
+    color: #3c3e3e;
   }
 }
 </style>
