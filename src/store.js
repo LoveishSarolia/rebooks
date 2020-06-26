@@ -27,7 +27,7 @@ export default new Vuex.Store({
       },
       {
         name: "Multivariable Calculus Textbook",
-        featured: false,
+        featured: true,
         isbn: 9780357042922,
         price: 150,
         category: "Textbooks",
@@ -79,7 +79,7 @@ export default new Vuex.Store({
           '9780131662551.jpg'
         ]
       },
-      {
+      /*{
         name: "World Geography Textbook",
         featured: false,
         isbn: 9780547484792,
@@ -132,7 +132,7 @@ export default new Vuex.Store({
         image: [
           '9781138788800.jpg'
         ]
-      }
+      } */
     ]
   },
   mutations: {
@@ -172,9 +172,6 @@ export default new Vuex.Store({
           product => product.isbn === productID
         )
       )
-    },
-    featuredListings: (state) => {
-      return state.products.filter(p => p.featured)
     }
   }
 });
