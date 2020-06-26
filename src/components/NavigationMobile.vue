@@ -5,19 +5,41 @@
       <i class="fas fa-search"></i>
     </div>
     <ul>
-      <li><router-link class="navLink" to='/'>Home</router-link></li>
-      <li><router-link class="navLink" to='/cart'>Cart</router-link></li>
+      <li>
+        <router-link class="nav-link" to='/'>
+          Home
+        </router-link>
+      </li>
+      <li>
+        <span>
+          <router-link class="nav-link" to='/cart'>
+            Cart ({{ cartCount }})
+          </router-link>
+        </span>
+      </li>
       <li>Account</li>
-      <li>About Us</li>    </ul>
+      <li>About Us</li>    
+    </ul>
+    <!--
     <div class="social-media">
       <i class="fab fa-twitter"></i>
       <i class="fab fa-instagram"></i>
       <i class="fab fa-facebook"></i>
     </div>
+    -->
   </div>
 </template>
 
-<script/>
+<script>
+export default {
+  name: 'app',
+  computed: {
+    cartCount () {
+      return this.$store.state.cart.length
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 #navigation-mobile {
@@ -27,13 +49,13 @@
     width: 200px;
     padding-left: 40px;
     li {
-      color: #fff;
+      color: #ffffff;
       font-size: 2rem;
       font-weight: bold;
       margin-bottom: 20px;
       cursor: pointer;
       &:hover {
-        color: #111;
+        color: #3c3e3e;
       }
     }
   }
@@ -63,7 +85,7 @@
       cursor: pointer;
     }
     ::placeholder {
-      color: white;
+      color: #ffffff;
     }
   }
   .social-media {
@@ -74,13 +96,14 @@
       margin: 0 20px 0 0;
       color: #ffffff;
       font-size: 2rem;
+      cursor: pointer;
     }
   }
 }
-.navLink {
+.nav-link {
   font-size: 2rem;
   font-weight: bold;
-  padding: 2px 10px;
+  padding: 2px;
   cursor: pointer;
   &:link, &:visited {
     color: #ffffff;

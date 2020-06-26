@@ -9,9 +9,9 @@ export default new Vuex.Store({
     products: [
       {
         name: "Organic Chemistry Textbook",
+        featured: true,
         isbn: 9781292160450,
         price: 75,
-        dateAdded: "Fri Jun 19 2020 20:00:00 GMT-0400 (Eastern Daylight Time)",
         category: "Textbooks",
         quantity: 1,
         details: {
@@ -27,9 +27,9 @@ export default new Vuex.Store({
       },
       {
         name: "Multivariable Calculus Textbook",
+        featured: false,
         isbn: 9780357042922,
         price: 150,
-        dateAdded: "Sat Jun 20 2020 16:00:00 GMT-0400 (Eastern Daylight Time)",
         category: "Textbooks",
         quantity: 1,
         details: {
@@ -44,10 +44,10 @@ export default new Vuex.Store({
         ]
       },
       {
-        name: "Physics Textbook",
+        name: "Conceptual Physics Textbook",
+        featured: true,
         isbn: 9780321909107,
         price: 50,
-        dateAdded: "Fri Jun 19 2020 10:00:00 GMT-0400 (Eastern Daylight Time)",
         category: "Textbooks",
         quantity: 1,
         details: {
@@ -61,6 +61,78 @@ export default new Vuex.Store({
           '9780321909107.jpg'
         ]
       },
+      {
+        name: "Biology Textbook",
+        featured: true,
+        isbn: 9780131662551,
+        price: 20,
+        category: "Textbooks",
+        quantity: 1,
+        details: {
+          publisher: "Prentice-Hall",
+          edition: 1,
+          seller: "Advaith S.",
+          condition: "Used - Acceptable",
+          extraInfo: "Pages ripped out and tear stains on random pages"
+        },
+        image: [
+          '9780131662551.jpg'
+        ]
+      },
+      {
+        name: "World Geography Textbook",
+        featured: false,
+        isbn: 9780547484792,
+        price: 40,
+        category: "Textbooks",
+        quantity: 1,
+        details: {
+          publisher: "Holt McDougal",
+          edition: 1,
+          seller: "Mitch D.",
+          condition: "Used - Like New",
+          extraInfo: undefined
+        },
+        image: [
+          '9780547484792.jpg'
+        ]
+      },
+      {
+        name: "Microeconomic Theory Textbook",
+        featured: true,
+        isbn: 9788131717257,
+        price: 25,
+        category: "Textbooks",
+        quantity: 1,
+        details: {
+          publisher: "Pearson",
+          edition: 5,
+          seller: "Loveish S.",
+          condition: "Used - Like New",
+          extraInfo: "Opened twice"
+        },
+        image: [
+          '9788131717257.jpg'
+        ]
+      },
+      {
+        name: "Gender Studies Textbook",
+        featured: false,
+        isbn: 9781138788800,
+        price: 25,
+        category: "Textbooks",
+        quantity: 1,
+        details: {
+          publisher: "Routledge",
+          edition: 1,
+          seller: "Joshua S.",
+          condition: "Used - Like New",
+          extraInfo: undefined
+        },
+        image: [
+          '9781138788800.jpg'
+        ]
+      }
     ]
   },
   mutations: {
@@ -100,6 +172,9 @@ export default new Vuex.Store({
           product => product.isbn === productID
         )
       )
+    },
+    featuredListings: (state) => {
+      return state.products.filter(p => p.featured)
     }
   }
 });

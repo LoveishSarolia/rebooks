@@ -33,6 +33,11 @@ export default {
       let img = require(`../assets/img/products/${product.image}`);
       return img
     }
+  },
+  computed: {
+    featuredListings: function() {
+      return this.$store.getters.featuredListings.slice(0,3)
+    }
   }
 };
 </script>

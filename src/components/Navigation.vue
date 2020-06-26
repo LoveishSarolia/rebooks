@@ -1,19 +1,38 @@
 <template>
   <div id="navigation">
     <ul>
-      <li><router-link class="navLink" to='/'>Home</router-link></li>
-      <li><router-link class="navLink" to='/cart'>Cart</router-link></li>
+      <li>
+        <router-link class="nav-link" to='/'>
+          Home
+        </router-link>
+      </li>
+      <li>
+        <span>
+          <router-link class="nav-link" to='/cart'>
+            Cart ({{ cartCount }})
+          </router-link>
+        </span>
+      </li>
       <li>Account</li>
-      <li>About Us</li>
+      <li>About Us</li>    
     </ul>
     <div class="search">
-      <input type="text" placeholder="Search for books, supplies, and more!" />
+      <input type="text" placeholder="Search for books by ISBN or Title" />
       <i class="fas fa-search"></i>
     </div>
   </div>
 </template>
 
-<script/>
+<script>
+export default {
+  name: 'app',
+  computed: {
+    cartCount () {
+      return this.$store.state.cart.length
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 #navigation {
@@ -53,14 +72,17 @@
     i {
       position: absolute;
       right: 20px;
-      top: 15px;
+      top: 12px;
       font-size: 1.6rem;
-      color: #aaa;
+      color: #3c3e3e;
       cursor: pointer;
+    }
+    ::placeholder {
+      color: #3c3e3e;
     }
   }
 }
-.navLink {
+.nav-link {
   font-size: 2rem;
   font-weight: bold;
   padding: 2px 10px;
