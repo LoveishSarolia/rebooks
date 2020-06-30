@@ -14,7 +14,11 @@
         </span>
       </li>
       <li>Account</li>
-      <li>About Us</li>    
+      <li>
+        <router-link class="nav-link" to='/about'>
+          About
+        </router-link>
+      </li>    
     </ul>
     <div class="search">
       <input type="text" placeholder="Search for books by ISBN or Title" />

@@ -45,7 +45,7 @@ export default new Vuex.Store({
       },
       {
         name: "Conceptual Physics Textbook",
-        featured: true,
+        featured: false,
         isbn: 9780321909107,
         price: 50,
         category: "Textbooks",
@@ -79,7 +79,7 @@ export default new Vuex.Store({
           '9780131662551.jpg'
         ]
       },
-      /*{
+      {
         name: "World Geography Textbook",
         featured: false,
         isbn: 9780547484792,
@@ -99,7 +99,7 @@ export default new Vuex.Store({
       },
       {
         name: "Microeconomic Theory Textbook",
-        featured: true,
+        featured: false,
         isbn: 9788131717257,
         price: 25,
         category: "Textbooks",
@@ -132,7 +132,7 @@ export default new Vuex.Store({
         image: [
           '9781138788800.jpg'
         ]
-      } */
+      }
     ]
   },
   mutations: {
@@ -172,6 +172,9 @@ export default new Vuex.Store({
           product => product.isbn === productID
         )
       )
+    },
+    featuredProducts: (state) => {
+      return state.products.filter(p => p.featured)
     }
   }
 });

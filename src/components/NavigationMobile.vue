@@ -12,13 +12,17 @@
       </li>
       <li>
         <span>
-          <router-link class="nav-link" to='/cart'>
+          <router-link class="nav-link" to='/cart/'>
             Cart ({{ cartCount }})
           </router-link>
         </span>
       </li>
       <li>Account</li>
-      <li>About Us</li>    
+      <li>
+        <router-link class="nav-link" to='/about'>
+          About
+        </router-link>
+      </li>    
     </ul>
     <!--
     <div class="social-media">
