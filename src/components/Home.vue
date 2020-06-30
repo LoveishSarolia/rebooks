@@ -3,7 +3,7 @@
       <h1>Rebooks</h1>
       <h2>Shop for Textbooks</h2>
       <ul class="featured-items">
-        <li v-for="product in products" :key="product.isbn" class="featured-items__item">
+        <li v-for="product in featuredProducts" :key="product.isbn" class="featured-items__item">
           <router-link :to="{name: 'product', params: {isbn: product.isbn}}">
             <img class="product-image" :src="imagePath(product)" alt="">
             <p class="product-title">{{ product.name }}</p>
@@ -22,7 +22,7 @@ export default {
   data() {
     return {
       products: productData.state.products,
-      featuredProducts: productData.getters.featuredProducts.slice(0,3)
+      featuredProducts: productData.getters.featuredProducts
     }
   },
   methods: {

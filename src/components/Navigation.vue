@@ -21,7 +21,7 @@
       </li>    
     </ul>
     <div class="search">
-      <input type="text" placeholder="Search for books by ISBN or Title" />
+      <input type="text" placeholder="Search for books by Title"/>
       <i class="fas fa-search"></i>
     </div>
   </div>
