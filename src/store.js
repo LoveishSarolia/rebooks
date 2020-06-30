@@ -45,7 +45,7 @@ export default new Vuex.Store({
       },
       {
         name: "Conceptual Physics Textbook",
-        featured: false,
+        featured: true,
         isbn: 9780321909107,
         price: 50,
         category: "Textbooks",
@@ -81,7 +81,7 @@ export default new Vuex.Store({
       },
       {
         name: "World Geography Textbook",
-        featured: false,
+        featured: true,
         isbn: 9780547484792,
         price: 40,
         category: "Textbooks",
@@ -99,7 +99,7 @@ export default new Vuex.Store({
       },
       {
         name: "Microeconomic Theory Textbook",
-        featured: false,
+        featured: true,
         isbn: 9788131717257,
         price: 25,
         category: "Textbooks",
@@ -117,7 +117,7 @@ export default new Vuex.Store({
       },
       {
         name: "Gender Studies Textbook",
-        featured: false,
+        featured: true,
         isbn: 9781138788800,
         price: 25,
         category: "Textbooks",
