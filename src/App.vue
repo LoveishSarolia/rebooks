@@ -10,6 +10,15 @@
         <Navigation v-if="!mobileView" />
       </div>
       <router-view></router-view>
+      <footer class="footer">
+        <div class="container">
+          <div class="columns">
+            <div class="content">
+              <p>©2020 — <strong>Rebooks</strong></p>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   </div>
 </template>
@@ -84,5 +93,16 @@ body {
 }
 .open {
   transform: translateX(300px);
+}
+footer {
+  background-color: #aec6cf !important;
+  color: #3c3c3c;  
+  margin-top: auto;
+  flex: 0 1 auto !important; 
+  min-height: 36px;
+  .content {
+    flex: 1 0 auto;  
+    text-align: center !important;
+  }
 }
 </style>

@@ -21,7 +21,8 @@ export default {
   name: 'home',
   data() {
     return {
-      products: productData.state.products
+      products: productData.state.products,
+      featuredProducts: productData.getters.featuredProducts.slice(0,3)
     }
   },
   methods: {
@@ -59,7 +60,9 @@ h2 {
   padding-left: 0;
   list-style: none;
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
+  flex-wrap: wrap;
   @media only screen and (max-width: 832px) {
     flex-direction: column;
   }

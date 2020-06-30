@@ -1,4 +1,4 @@
-# rebooks.loveishsarolia.com
+# Rebooks
 
 ## Project setup
 ```
