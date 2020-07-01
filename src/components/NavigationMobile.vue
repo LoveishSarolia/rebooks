@@ -17,7 +17,7 @@
           </router-link>
         </span>
       </li>
-      <li>Account</li>
+      <!-- <li>Account</li> -->
       <li>
         <router-link class="nav-link" to='/about'>
           About
