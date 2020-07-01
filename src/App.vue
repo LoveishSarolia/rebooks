@@ -42,7 +42,7 @@ export default {
     Navigation,
     NavigationMobile
   },
-  created() {
+  created () {
     this.handleView();
     window.addEventListener('resize', this.handleView);
   }
