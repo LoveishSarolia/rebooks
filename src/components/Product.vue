@@ -88,7 +88,9 @@ a:hover {
     color: #ffffff;
 }
 .align {
-  text-align: left;
-  margin-left: 25px;
+  @media only screen and (max-width: 415px) {
+    text-align: left;
+    margin-left: 25px;
+  }
 }
 </style>
