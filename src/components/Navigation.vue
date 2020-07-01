@@ -68,7 +68,7 @@ export default {
       width: calc(100% - 80px);
       padding: 15px 60px 15px 20px;
       margin: 0;
-      border-radius: 20px;
+      border-radius: 10px;
       background-color: #efefef;
       font-family: "Segoe UI", Tahoma;
       font-size: 1rem;
