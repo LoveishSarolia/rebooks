@@ -121,7 +121,7 @@ export default {
 }
 .thumbnail {
   max-width: 50px;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 .total-screen {
   background: #dcecfd91;
