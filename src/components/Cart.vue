@@ -1,6 +1,7 @@
 <template>
   <div class="wrapper">
     <h1>Cart</h1>
+    <div class="flex-col">
     <ul class="cart-contents">
       <li class="flex-col cart-contents__item" v-for="item in cart" :key="item">
         <img :src="imagePath(item)" class="thumbnail" alt="">
@@ -43,6 +44,7 @@
         Check Out
       </button>
     </section>
+    </div>
   </div>
 </template>
 
@@ -98,8 +100,9 @@ export default {
 .cart-contents {
   width: 90%;
   margin-right: 1rem;
-  @media only screen and (max-width: 832px) {
-    width: 100%;
+  @media only screen and (max-width: 415px) {
+    display: block;
+    margin: 10 auto;
   }
 }
 .cart-contents__item {
