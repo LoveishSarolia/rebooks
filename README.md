@@ -1,4 +1,4 @@
-# [Rebooks] (https://rebooks.netlify.app/)
+# [Rebooks](https://rebooks.netlify.app/)
 
 ## TODOs
 - [ ] Add account management features (including multi-vendor listing)
