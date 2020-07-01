@@ -10,7 +10,7 @@
           <p>Condition: {{ product.details.condition }}</p>
           <p><em>Seller: {{ product.details.seller }}</em></p>
           <h3>Details</h3>
-          <ul>
+          <ul class="align">
             <li>Publisher: {{ product.details.publisher }}</li>
             <li>Edition: {{ product.details.edition }}</li>
             <li v-if="product.details.extraInfo">Additional Information: {{ product.details.extraInfo }}</li>
@@ -45,11 +45,21 @@ export default {
 .flex-col {
   display: flex;
   align-items: flex-start;
+  @media only screen and (max-width: 415px) {
+    display: block;
+    margin: 0 auto;
+  }
 }
 .flex-col2 {
   width: 50%;
   padding: 50px 50px 0 0;
   text-align: left;
+  @media only screen and (max-width: 415px) {
+    display: block;
+    margin: 0 auto;
+    padding: 0px 0px 0 0;
+    text-align: center;
+  }  
 }
 .button {
   padding: 0.5rem 0.75rem;
@@ -76,5 +86,9 @@ a:link, a:visited {
 }
 a:hover {
     color: #ffffff;
+}
+.align {
+  text-align: left;
+  margin-left: 25px;
 }
 </style>
