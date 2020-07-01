@@ -7,6 +7,7 @@
 - [ ] Safe meeting recommendations using Google Maps API
 
 ## FIXMEs
+- [x] Fix mobile formatting for product view and shopping cart
 - [ ] Fix search bar functionality (opportunity to learn Quasar)
 - [ ] Fix account creation (registration/login) process
 
