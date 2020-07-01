@@ -1,6 +1,17 @@
 # Rebooks
 
-## Project setup
+## TODOs
+- [ ] Add account management features (including multi-vendor listing)
+- [ ] Social media-like functionality to keep track of sellers with similar classes
+- [ ] Listing system that utilizes Google Books API
+- [ ] Safe meeting recommendations using Google Maps API
+
+## FIXMEs
+- [ ] Fix search bar functionality (opportunity to learn Quasar)
+- [ ] Fix account creation (registration/login) process
+
+## Project Setup Steps
+### Project setup
 ```
 npm install
 ```
@@ -19,6 +30,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
