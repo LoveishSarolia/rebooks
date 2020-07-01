@@ -1,7 +1,6 @@
 <template>
   <div class="wrapper">
     <h1>Cart</h1>
-    <div class="flex-col">
     <ul class="cart-contents">
       <li class="flex-col cart-contents__item" v-for="item in cart" :key="item">
         <img :src="imagePath(item)" class="thumbnail" alt="">
@@ -44,7 +43,6 @@
         Check Out
       </button>
     </section>
-    </div>
   </div>
 </template>
 
@@ -98,7 +96,7 @@ export default {
 
 <style lang="scss">
 .cart-contents {
-  width: 70%;
+  width: 90%;
   margin-right: 1rem;
   @media only screen and (max-width: 832px) {
     width: 100%;
@@ -143,5 +141,11 @@ export default {
 }
 .total-screen__button {
   width: 100%;
+}
+ul {
+  @media only screen and (max-width: 415px) {
+    padding-inline-start: 0;
+  }
+
 }
 </style>
